@@ -1,0 +1,29 @@
+/usr/lib/erlang/bin/erl -pa /home/roger/IdeaProjects/warden/out/production/Prison -pa /home/roger/IdeaProjects/warden
+Eshell V8.2  (abort with ^G)
+
+1> Joseph=prisoner:create(joseph,titForTatRandom,[]).
+<0.59.0>
+
+2> Roger=prisoner:create(roger,grudger,[]).
+<0.61.0>
+
+3> Supervisor=warden:start({[],[]}).
+<0.63.0>
+
+4> warden:add(Supervisor, PrisonerA).
+1
+
+5> warden:add(Supervisor, PrisonerB).
+2
+
+6> warden:run(Supervisor,3).
+ok
+
+7> warden:stats(Supervisor).
+[{joseph,4},{roger,4}]
+
+8> prisoner:test().
+  Test passed.
+ok
+
+9> 

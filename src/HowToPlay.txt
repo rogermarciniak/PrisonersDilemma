@@ -1,0 +1,44 @@
+---------------------------------------
+To play you need to follow these steps:
+---------------------------------------
+0.) Compile prisoner.erl & warden.erl
+
+1.) Paste this into the erlang shell:
+
+    > warden:playGame(N).
+
+    where 'N' is the number of turns.
+
+2.) Voila! The result will be displayed like this:
+
+    [{roger,2},{joseph,5}]
+
+    where each {} contains prisoner name and their sentence.
+
+
+PS. to alter the names of the prisoners or the strategies used,
+    please edit the 'playGame()' function in the 'warden.erl' file.
+
+    -------------------------
+    AVAILABLE STRATEGIES:
+    -------------------------
+        random,
+        titForTatRandom,
+        suspiciousTitForTat,
+        grudger
+    -------------------------
+       basic strats like:
+        do_cooperation
+        do_defect
+       also work.
+
+NOTES:
+A.) PLEASE RERUN THE CODE WHENEVER ENTERING A COMMAND IN THE SHELL.
+
+B.) To run benchmark, paste this into the erlang shell:
+
+    > warden:benchmark(N).
+
+    where 'N' is the number of turns.
+
+C.) I ran out of time to develop the concurrent version and to do more tests.
